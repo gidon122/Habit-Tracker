@@ -1,5 +1,6 @@
 import React from 'react'
 import { Zap, TrendingUp, Users, ArrowRight } from 'lucide-react'
+import Button from '../components/ui/Button'
 
 const Landingpage = () => {
   return (
@@ -11,9 +12,9 @@ const Landingpage = () => {
             <h1 className="text-2xl font-black tracking-tighter">
               HABIT <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">FORGE</span>
             </h1>
-            <button className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Login
-            </button>
+          
+
+          <Button>Login</Button>
           </div>
         </div>
       </nav>
@@ -36,9 +37,7 @@ const Landingpage = () => {
               The habit tracker that shows you with undeniable clarity who you're becoming
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center gap-2 group">
-                Get Started <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Button size="lg">Get Started</Button>
               <button className="px-8 py-3 rounded-full border-2 border-purple-400/50 hover:border-purple-400 hover:bg-purple-400/10 font-bold text-lg transition-all duration-300">
                 Learn More
               </button>
