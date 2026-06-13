@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { LucideIcon } from 'lucide-react'
+// Add to imports at the top:
+import { useNavigate, useLocation } from 'react-router-dom'
 import {
   BarChart3,
   CheckCircle2,
@@ -10,15 +12,16 @@ import {
   User,
 } from 'lucide-react'
 
-const navItems: Array<{ name: string; icon: LucideIcon; href: string }> = [
-  { name: 'Dashboard', icon: Home, href: '#dashboard' },
-  { name: 'Habits', icon: CheckCircle2, href: '#habits' },
-  { name: 'Analytics', icon: BarChart3, href: '#analytics' },
-  { name: 'Profile', icon: User, href: '#profile' },
+const navItems = [
+  { name: 'Dashboard', icon: Home, href: '/' },
+  { name: 'Habits', icon: CheckCircle2, href: '/habits' },
+  { name: 'Analytics', icon: BarChart3, href: '/analytics' },
+  { name: 'Profile', icon: User, href: '/profile' },
 ]
 
 const Sidebar = () => {
-  const [activeItem, setActiveItem] = useState('Dashboard')
+  const navigate = useNavigate()
+const location = useLocation()
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
@@ -54,12 +57,13 @@ const Sidebar = () => {
         <nav className="space-y-1.5">
           {navItems.map((item) => {
             const Icon = item.icon
-            const isActive = activeItem === item.name
+
+const isActive = location.pathname === item.href
             return (
               <button
                 key={item.name}
                 type="button"
-                onClick={() => setActiveItem(item.name)}
+                onClick={() => navigate(item.href)}
                 className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-300/60 ${
                   isActive
                     ? 'bg-slate-800 text-white shadow-lg shadow-slate-950/20'
