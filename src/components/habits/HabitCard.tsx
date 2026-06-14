@@ -15,60 +15,40 @@ export default function HabitsListUI() {
     {
       icon: Droplets,
       title: "Drink 2L of water",
-      category: "Health",
       frequency: "daily",
-      description: "Stay hydrated throughout the day.",
       streak: 13,
-      completions: 58,
-      total: 88,
       iconBg: "bg-cyan-100",
       iconColor: "text-cyan-500",
     },
     {
       icon: Dumbbell,
       title: "Morning run",
-      category: "Fitness",
       frequency: "daily",
-      description: "30-minute run before breakfast.",
       streak: 5,
-      completions: 25,
-      total: 42,
       iconBg: "bg-pink-100",
       iconColor: "text-pink-500",
     },
     {
       icon: BookOpen,
       title: "Read 20 minutes",
-      category: "Learning",
       frequency: "daily",
-      description: "Fiction or non-fiction, no phone.",
-      streak: 1,
-      completions: 28,
-      total: 70,
+      streak: "3",
       iconBg: "bg-violet-100",
       iconColor: "text-violet-500",
     },
     {
       icon: Sparkles,
       title: "Meditate",
-      category: "Mindfulness",
       frequency: "daily",
-      description: "10 minutes of breath-focused meditation.",
       streak: 2,
-      completions: 7,
-      total: 41,
       iconBg: "bg-purple-100",
       iconColor: "text-purple-500",
     },
     {
       icon: Pencil,
       title: "Journal",
-      category: "Mindfulness",
       frequency: "daily",
-      description: "Write 3 things I'm grateful for.",
       streak: 2,
-      completions: 8,
-      total: 38,
       iconBg: "bg-orange-100",
       iconColor: "text-orange-500",
     },
@@ -111,10 +91,6 @@ export default function HabitsListUI() {
               />
             </div>
 
-            <select className="rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-700 outline-none">
-              <option>All categories</option>
-            </select>
-
             <div className="flex overflow-hidden rounded-xl border border-zinc-200">
               <button className="bg-amber-50 px-4 py-3 text-sm font-medium text-amber-600">
                 Active · 11
@@ -148,18 +124,12 @@ export default function HabitsListUI() {
                           {habit.title}
                         </h3>
 
-                        <span className="rounded-full bg-zinc-100 px-2 py-1 text-xs text-zinc-600">
-                          {habit.category}
-                        </span>
+                        
 
                         <span className="rounded-full bg-zinc-100 px-2 py-1 text-xs text-zinc-600">
                           {habit.frequency}
                         </span>
                       </div>
-
-                      <p className="mt-1 text-sm text-zinc-500">
-                        {habit.description}
-                      </p>
                     </div>
                   </div>
 
@@ -170,11 +140,6 @@ export default function HabitsListUI() {
                         🔥 {habit.streak}
                       </span>
 
-                      <span className="flex items-center gap-1">
-                        🏆 {habit.completions}
-                      </span>
-
-                      <span>{habit.total} total</span>
                     </div>
 
                     <div className="flex items-center gap-3">

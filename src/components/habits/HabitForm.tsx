@@ -1,34 +1,8 @@
-import {
-  Droplets,
-  Dumbbell,
-  Flame,
-  Target,
-  Apple,
-  BookOpen,
-  Heart,
-  Moon,
-  Pill,
-  Brain,
-  Coffee,
-  Activity,
-} from "lucide-react";
+import {Droplets, Dumbbell, Flame, Target, Apple, BookOpen, Heart, Moon, Pill, Brain, Coffee, Activity,} from "lucide-react";
 import Button from "../ui/button";
 
 export default function HabitFormUI() {
-  const icons = [
-    Dumbbell,
-    Activity,
-    Flame,
-    Droplets,
-    Heart,
-    Apple,
-    BookOpen,
-    Target,
-    Brain,
-    Pill,
-    Moon,
-    Coffee,
-  ];
+  const icons = [Dumbbell, Activity, Flame, Droplets, Heart, Apple, BookOpen, Target, Brain, Pill, Moon, Coffee,];
 
   const colors = [
     "#6366F1",
@@ -43,71 +17,42 @@ export default function HabitFormUI() {
   ];
 
   return (
+  <div className="flex items-center justify-center min-h-screen">
     <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl border border-gray-100">
       {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-gray-900">New Habit</h2>
-
         <button className="rounded-md p-1 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600">
           ✕
         </button>
       </div>
-
       {/* Habit Name */}
       <div className="mb-4">
         <label className="mb-2 block text-sm font-medium text-gray-700">
           Habit name
         </label>
-
         <input
           type="text"
           placeholder="e.g. Drink 2L of water"
           className="w-full rounded-xl border-2 border-amber-300 bg-white px-4 py-3 text-sm outline-none"
         />
       </div>
-
-      {/* Description */}
-      <div className="mb-5">
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Description
-        </label>
-
-        <textarea
-          rows={3}
-          placeholder="Why does this habit matter to you?"
-          className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none"
-        />
-      </div>
-
       {/* Category & Frequency */}
       <div className="mb-5 grid grid-cols-2 gap-3">
         <div>
           <label className="mb-2 block text-sm font-medium text-gray-700">
-            Category
-          </label>
-
-          <select className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-sm outline-none">
-            <option>Health</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
             Frequency
           </label>
-
           <select className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-sm outline-none">
             <option>Daily</option>
           </select>
         </div>
       </div>
-
       {/* Icons */}
       <div className="mb-6">
         <label className="mb-3 block text-sm font-medium text-gray-700">
           Icon
         </label>
-
         <div className="flex flex-wrap gap-2">
           {icons.map((Icon, index) => (
             <button
@@ -123,13 +68,11 @@ export default function HabitFormUI() {
           ))}
         </div>
       </div>
-
       {/* Colors */}
       <div className="mb-8">
         <label className="mb-3 block text-sm font-medium text-gray-700">
           Color
         </label>
-
         <div className="flex flex-wrap gap-3">
           {colors.map((color, index) => (
             <button
@@ -154,5 +97,6 @@ export default function HabitFormUI() {
           <Button>Create Habit</Button>
       </div>
     </div>
+  </div>
   );
 }

@@ -42,17 +42,16 @@ const location = useLocation()
   }, [darkMode])
 
   return (
-    <aside className="flex h-screen w-70 flex-shrink-0 flex-col justify-between bg-slate-950/95 px-5 py-5 text-slate-100 shadow-2xl shadow-slate-950/40 backdrop-blur-xl ring-1 ring-white/10">
+    <aside className="flex h-screen w-70 flex-shrink-0 flex-col justify-between bg-stone-50 px-5 py-5 text-slate-100 shadow-2xl shadow-slate-950/40 backdrop-blur-xl ring-1 ring-white/10">
           <div>
-        <div className="mb-6 flex items-center gap-3 text-slate-50">
-          <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-emerald-400/15 text-emerald-300 ring-1 ring-emerald-300/20">
-            <span className="text-xl font-semibold">H</span>
-          </div>
-          <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-400">HabitForge</p>
-            <h1 className="text-xl font-semibold text-white">Tracker Studio</h1>
-          </div>
-        </div>
+      <div className="flex h-16 items-center justify-between px-6">
+        <h1 className="text-2xl font-black tracking-tighter">
+           HABIT{" "}
+        <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+           FORGE
+        </span>
+        </h1>
+      </div>
 
         <nav className="space-y-1.5">
           {navItems.map((item) => {
