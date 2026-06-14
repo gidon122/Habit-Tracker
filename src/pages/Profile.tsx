@@ -1,4 +1,4 @@
-import React from 'react'
+// React import removed; JSX runtime automatic
 
 const Profile = () => {
   return (

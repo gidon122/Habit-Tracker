@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { LucideIcon } from 'lucide-react'
+// removed unused LucideIcon type import
 // Add to imports at the top:
 import { useNavigate, useLocation } from 'react-router-dom'
 import {

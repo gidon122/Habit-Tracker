@@ -1,9 +1,9 @@
-import React from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 
 interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   loading?: boolean;

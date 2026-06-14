@@ -1,5 +1,5 @@
-import React from 'react'
-import { Zap, TrendingUp, Users, ArrowRight } from 'lucide-react'
+// React import removed; JSX runtime automatic
+import { Zap, TrendingUp, Users } from 'lucide-react'
 import Button from '../components/ui/Button'
 
 const Landingpage = () => {
